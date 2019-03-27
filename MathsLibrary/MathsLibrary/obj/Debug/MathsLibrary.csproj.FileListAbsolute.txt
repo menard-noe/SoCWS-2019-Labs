@@ -1,0 +1,16 @@
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\bin\Debug\MathsLibrary.dll.config
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\bin\Debug\MathsLibrary.dll
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\bin\Debug\MathsLibrary.pdb
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.csprojAssemblyReference.cache
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.csproj.CoreCompileInputs.cache
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.dll
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.pdb
+D:\Projet\S8\Service\TD3\MathsLibrary\MathsLibrary\obj\Debug\XsdGeneratedCode\GeneratedXsdTypes.cs
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\bin\Debug\MathsLibrary.dll.config
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\bin\Debug\MathsLibrary.dll
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\bin\Debug\MathsLibrary.pdb
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.csprojAssemblyReference.cache
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.csproj.CoreCompileInputs.cache
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\obj\Debug\XsdGeneratedCode\GeneratedXsdTypes.cs
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.dll
+D:\Projet\S8\Service\WebService\MathsLibrary\MathsLibrary\obj\Debug\MathsLibrary.pdb
