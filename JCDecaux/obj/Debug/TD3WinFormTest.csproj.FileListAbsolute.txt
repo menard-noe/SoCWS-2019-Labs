@@ -1,0 +1,14 @@
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\bin\Debug\TD3WinFormTest.exe.config
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\bin\Debug\TD3WinFormTest.exe
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\bin\Debug\TD3WinFormTest.pdb
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.csprojAssemblyReference.cache
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.Form1.resources
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.Properties.Resources.resources
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.csproj.GenerateResource.cache
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.csproj.CoreCompileInputs.cache
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.exe
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.pdb
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kehra\Desktop\SI4\S8\Service Oriented & Web Services\TD3\TD3\TD3WinFormTest\obj\Debug\TD3WinFormTest.csproj.CopyComplete
