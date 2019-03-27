@@ -1,0 +1,7 @@
+C:\Users\kehra\source\repos\WCFTest\WCFTest\bin\Debug\WCFTest.dll.config
+C:\Users\kehra\source\repos\WCFTest\WCFTest\bin\Debug\WCFTest.dll
+C:\Users\kehra\source\repos\WCFTest\WCFTest\bin\Debug\WCFTest.pdb
+C:\Users\kehra\source\repos\WCFTest\WCFTest\obj\Debug\WCFTest.csprojAssemblyReference.cache
+C:\Users\kehra\source\repos\WCFTest\WCFTest\obj\Debug\WCFTest.csproj.CoreCompileInputs.cache
+C:\Users\kehra\source\repos\WCFTest\WCFTest\obj\Debug\WCFTest.dll
+C:\Users\kehra\source\repos\WCFTest\WCFTest\obj\Debug\WCFTest.pdb
