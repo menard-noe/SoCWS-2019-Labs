@@ -1,0 +1,7 @@
+D:\Projet\S8\Service\TD2\TD2BisBis\TD2BisBis\bin\Debug\TD2BisBis.dll.config
+D:\Projet\S8\Service\TD2\TD2BisBis\TD2BisBis\bin\Debug\TD2BisBis.dll
+D:\Projet\S8\Service\TD2\TD2BisBis\TD2BisBis\bin\Debug\TD2BisBis.pdb
+D:\Projet\S8\Service\TD2\TD2BisBis\TD2BisBis\obj\Debug\TD2BisBis.csprojAssemblyReference.cache
+D:\Projet\S8\Service\TD2\TD2BisBis\TD2BisBis\obj\Debug\TD2BisBis.csproj.CoreCompileInputs.cache
+D:\Projet\S8\Service\TD2\TD2BisBis\TD2BisBis\obj\Debug\TD2BisBis.dll
+D:\Projet\S8\Service\TD2\TD2BisBis\TD2BisBis\obj\Debug\TD2BisBis.pdb
