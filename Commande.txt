@@ -1,0 +1,1 @@
+curl --get "https://api.jcdecaux.com/vls/v1/stations?apiKey=b5cf3e8decb9b8f1da7ec4904881e4eac22159aa&contract=Toulouse"
