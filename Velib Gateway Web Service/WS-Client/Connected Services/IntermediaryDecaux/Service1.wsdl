@@ -4,35 +4,34 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IntermediaryWS" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IIntermediaryDecaux_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="IIntermediaryDecaux_GetCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCities" />
   </wsdl:message>
-  <wsdl:message name="IIntermediaryDecaux_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="IIntermediaryDecaux_GetCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
   </wsdl:message>
-  <wsdl:message name="IIntermediaryDecaux_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="IIntermediaryDecaux_GetStationsInfoCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationsInfoCity" />
   </wsdl:message>
-  <wsdl:message name="IIntermediaryDecaux_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="IIntermediaryDecaux_GetStationsInfoCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationsInfoCityResponse" />
   </wsdl:message>
   <wsdl:portType name="IIntermediaryDecaux">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetData" message="tns:IIntermediaryDecaux_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetDataResponse" message="tns:IIntermediaryDecaux_GetData_OutputMessage" />
+    <wsdl:operation name="GetCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetCities" message="tns:IIntermediaryDecaux_GetCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetCitiesResponse" message="tns:IIntermediaryDecaux_GetCities_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetDataUsingDataContract" message="tns:IIntermediaryDecaux_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetDataUsingDataContractResponse" message="tns:IIntermediaryDecaux_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="GetStationsInfoCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetStationsInfoCity" message="tns:IIntermediaryDecaux_GetStationsInfoCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetStationsInfoCityResponse" message="tns:IIntermediaryDecaux_GetStationsInfoCity_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIntermediaryDecaux" type="tns:IIntermediaryDecaux">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IIntermediaryDecaux/GetData" style="document" />
+    <wsdl:operation name="GetCities">
+      <soap:operation soapAction="http://tempuri.org/IIntermediaryDecaux/GetCities" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -40,8 +39,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IIntermediaryDecaux/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="GetStationsInfoCity">
+      <soap:operation soapAction="http://tempuri.org/IIntermediaryDecaux/GetStationsInfoCity" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

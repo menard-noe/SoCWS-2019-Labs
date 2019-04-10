@@ -25,7 +25,6 @@
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="f8ac64b5-d7ef-47c3-9e6f-d5ddb63747ec" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?disco" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="1f11cc9f-eef0-4a00-b42a-6448d1ea5b31" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd1" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="1ee31a33-a267-4b52-9c8c-bf79ad3c5d84" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd0" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="708882ba-3d67-4631-89cf-11e18b4b2ad3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd2" />
     <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="4038c015-aa98-43c9-975b-d43f34eaf3cd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?wsdl" />
   </Metadata>
   <Extensions>

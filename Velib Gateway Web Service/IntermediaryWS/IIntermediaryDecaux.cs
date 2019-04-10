@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Newtonsoft.Json.Linq;
+
 
 namespace IntermediaryWS
 {
@@ -12,10 +14,11 @@ namespace IntermediaryWS
     public interface IIntermediaryDecaux
     {
         [OperationContract]
-        string GetData(int value);
+        String GetCities(int value);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        String GetStationsInfoCity(int value);
+
 
         // TODO: ajoutez vos opérations de service ici
     }
