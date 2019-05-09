@@ -93,6 +93,13 @@
     </style>
 
     <div>
+        <asp:Label runat="server" Text="Depart"></asp:Label>
+        <asp:TextBox ID="Depart" runat="server">
+        </asp:TextBox>
+        <asp:Label runat="server" Text="">Arrive</asp:Label>
+        <asp:TextBox ID="Arrive" runat="server">
+        </asp:TextBox>
+
         <asp:Button ID="Button1" runat="server" Text="Validate" OnClick="ValidateForm"/>
         <asp:TextBox ID="TextBox1" runat="server">
         </asp:TextBox>
@@ -259,7 +266,7 @@ AutocompleteDirectionsHandler.prototype.route = function() {
 };
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG6cBbOp7_ko1vu350eqXRrJR47MGIo7w&libraries=places&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYXWW2Y_IdfTYXyn-iep5hbHDdpOyTqwM&libraries=places&callback=initMap">
     </script>
     
 </asp:Content>
