@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WS-Client", "WS-Client\WS-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntermediaryWS", "IntermediaryWS\IntermediaryWS.csproj", "{1BE5EDE9-CB6F-4DF8-9C28-09F2801714DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web-Client", "Web-Client\Web-Client.csproj", "{AFA27DAD-7CFF-405D-8970-0454023CF1F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BE5EDE9-CB6F-4DF8-9C28-09F2801714DA} = {1BE5EDE9-CB6F-4DF8-9C28-09F2801714DA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +29,10 @@ Global
 		{1BE5EDE9-CB6F-4DF8-9C28-09F2801714DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BE5EDE9-CB6F-4DF8-9C28-09F2801714DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BE5EDE9-CB6F-4DF8-9C28-09F2801714DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA27DAD-7CFF-405D-8970-0454023CF1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA27DAD-7CFF-405D-8970-0454023CF1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA27DAD-7CFF-405D-8970-0454023CF1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA27DAD-7CFF-405D-8970-0454023CF1F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

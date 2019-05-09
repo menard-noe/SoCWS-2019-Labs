@@ -13,6 +13,8 @@ namespace IntermediaryWS
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class IntermediaryDecaux : IIntermediaryDecaux
     {
+        //https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY
+
         String cities;
         String infos;
         IntermediaryDecaux()
