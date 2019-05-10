@@ -14,9 +14,16 @@ namespace Web_Client
 {
     public partial class About : Page
     {
+        public String originAddress;
+        public String destinationAddress;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            originAddress = Request.QueryString["originAddress"];
+            destinationAddress = Request.QueryString["destinationAddress"];
 
+            /*originAddress = "a";
+            destinationAddress = "b";*/
         }
 
         protected void ValidateForm(object sender, EventArgs e)
@@ -57,6 +64,12 @@ namespace Web_Client
             //json.JsonConvert.DeserializeObject<json>(json);
 
 
+            //Response.Redirect("http://localhost:50587/Contact/id=5");
+
+            string url3 = "About?" +
+            "originAddress=" + HttpUtility.UrlEncode("123") +
+            "&destinationAddress=" + HttpUtility.UrlEncode("456");
+            Response.Redirect(url3);
 
 
 
