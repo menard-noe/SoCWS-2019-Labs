@@ -10,17 +10,26 @@ using Newtonsoft.Json.Linq;
 
 namespace IntermediaryWS
 {
+
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class IntermediaryDecaux : IIntermediaryDecaux
     {
         //https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY
 
+
+
+
         //String cities;
+        Stat stat;
         String infos;
         List<Stations> stationList;
         IntermediaryDecaux()
         {
+            stat = new Stat();
+            stat.writeFile();
+            
             String contract = "Lyon";
+            stat.AddWSVelibRequest();
             WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?apiKey=0d3d77b4dfec90f83ec727cf828e8c94c599f2ef&contract=" + contract);
             WebResponse response = request.GetResponse();
 
@@ -32,73 +41,32 @@ namespace IntermediaryWS
             infos = reader.ReadToEnd();
 
             stationList = ParseStations(infos);
-            //infos = JArray.Parse(responseFromServer);
 
-
-            /*request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/contracts?apiKey=0d3d77b4dfec90f83ec727cf828e8c94c599f2ef");
-            response = request.GetResponse();
-            dataStream = response.GetResponseStream();
-            reader = new StreamReader(dataStream);
-            cities = reader.ReadToEnd();*/
         }
 
 
         public String GetStationsInfoCity(int value)
         {
+            stat.AddClientRequestIWS();
             return infos;
         }
 
         public List<Double> FindStation(String depart, String arrive)
         {
+            stat.AddClientRequestIWS();
+            stat.AddClientRequestGoogle();
+
             List<Double> list = new List<Double>();
 
+            stat.AddClientRequestGoogle();
             Tuple<double, double> departTuple = GetCoordonate("https://maps.googleapis.com/maps/api/geocode/json?address=" + depart + "&key=AIzaSyCnEnbiMPFHqc_frV2vB8D9pFxnYcLVXO4");
 
             list.AddRange(findClosestStation(departTuple));
 
-
-            /*WebRequest request = WebRequest.Create("https://maps.googleapis.com/maps/api/geocode/json?address="+ depart +"&key=AIzaSyCnEnbiMPFHqc_frV2vB8D9pFxnYcLVXO4");
-            request.Credentials = CredentialCache.DefaultCredentials;
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            string responseFromServer = reader.ReadToEnd();
-            reader.Close();
-            dataStream.Close();
-            response.Close();
-
-            JObject jObject = JObject.Parse(responseFromServer);
-            JArray jArray = (JArray)jObject.GetValue("results");
-            jObject = (JObject)jArray[0];
-            jObject = (JObject)jObject.GetValue("geometry");
-            jObject = (JObject)jObject.GetValue("location");
-            double lat = (double)jObject.GetValue("lat");
-            double lng = (double)jObject.GetValue("lng");*/
-
+            stat.AddClientRequestGoogle();
             Tuple<double, double> arrivalTuple = GetCoordonate("https://maps.googleapis.com/maps/api/geocode/json?address=" + arrive + "&key=AIzaSyCnEnbiMPFHqc_frV2vB8D9pFxnYcLVXO4");
 
             list.AddRange(findClosestStation(arrivalTuple));
-
-
-            /*WebRequest request2 = WebRequest.Create("https://maps.googleapis.com/maps/api/geocode/json?address=" + arrive + "&key=AIzaSyCnEnbiMPFHqc_frV2vB8D9pFxnYcLVXO4");
-            request2.Credentials = CredentialCache.DefaultCredentials;
-            HttpWebResponse response2 = (HttpWebResponse)request2.GetResponse();
-            Stream dataStream2 = response2.GetResponseStream();
-            StreamReader reader2 = new StreamReader(dataStream2);
-            string responseFromServer2 = reader2.ReadToEnd();
-            reader2.Close();
-            dataStream2.Close();
-            response2.Close();
-
-
-            JObject jObject2 = JObject.Parse(responseFromServer2);
-            JArray jArray2 = (JArray)jObject2.GetValue("results");
-            jObject2 = (JObject)jArray2[0];
-            jObject2 = (JObject)jObject2.GetValue("geometry");
-            jObject2 = (JObject)jObject2.GetValue("location");
-            double lat2 = (double)jObject2.GetValue("lat");
-            double lng2 = (double)jObject2.GetValue("lng");*/
-
 
             return list;
         }

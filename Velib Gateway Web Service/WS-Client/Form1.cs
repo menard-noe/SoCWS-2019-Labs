@@ -33,8 +33,8 @@ namespace WS_Client
         private void button2_Click(object sender, EventArgs e)
         {
             IntermediaryDecauxClient client = new IntermediaryDecauxClient();
-            richTextBox1.Text =
-            client.GetCities(14);
+            /*richTextBox1.Text =
+            client.GetCities(14);*/
         }
     }
 }
