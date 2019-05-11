@@ -13,11 +13,12 @@ namespace IntermediaryWS
     [ServiceContract]
     public interface IIntermediaryDecaux
     {
-        [OperationContract]
-        String GetCities(int value);
 
         [OperationContract]
         String GetStationsInfoCity(int value);
+
+        [OperationContract]
+        List<Double> FindStation(String depart, String arrive);
 
 
         // TODO: ajoutez vos opérations de service ici

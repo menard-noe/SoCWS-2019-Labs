@@ -26,6 +26,12 @@ namespace Web_Client.IntermediaryDecaux {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/GetStationsInfoCity", ReplyAction="http://tempuri.org/IIntermediaryDecaux/GetStationsInfoCityResponse")]
         System.Threading.Tasks.Task<string> GetStationsInfoCityAsync(int value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/FindStation", ReplyAction="http://tempuri.org/IIntermediaryDecaux/FindStationResponse")]
+        double[] FindStation(string depart, string arrive);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/FindStation", ReplyAction="http://tempuri.org/IIntermediaryDecaux/FindStationResponse")]
+        System.Threading.Tasks.Task<double[]> FindStationAsync(string depart, string arrive);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace Web_Client.IntermediaryDecaux {
         
         public System.Threading.Tasks.Task<string> GetStationsInfoCityAsync(int value) {
             return base.Channel.GetStationsInfoCityAsync(value);
+        }
+        
+        public double[] FindStation(string depart, string arrive) {
+            return base.Channel.FindStation(depart, arrive);
+        }
+        
+        public System.Threading.Tasks.Task<double[]> FindStationAsync(string depart, string arrive) {
+            return base.Channel.FindStationAsync(depart, arrive);
         }
     }
 }

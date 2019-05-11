@@ -132,10 +132,30 @@
     </div>
     <script>
         function initMap() {
-     
-            var test = "<%=this.originAddress%>"
 
-            window.alert(test);
+            //Rue Geo Chavez, Lyon
+
+            //Rue de la Barre, Lyon
+
+            var originAddress = "<%=this.originAddress%>";
+            var destinationAddress = "<%=this.destinationAddress%>";
+            var lat1 = "<%=this.lat1%>";
+            var lng1 = "<%=this.lng1%>";
+            var lat2 = "<%=this.lat2%>";
+            var lng2 = "<%=this.lng2%>";
+
+            lat1 = lat1.replace(',', '.');
+            lng1 = lng1.replace(',', '.');
+            lat2 = lat2.replace(',', '.');
+            lng2 = lng2.replace(',', '.');
+
+            try {
+                var latlng1 = new google.maps.LatLng(parseFloat(lat1), parseFloat(lng1));
+                var latlng2 = new google.maps.LatLng(parseFloat(lat2), parseFloat(lng2));
+            }
+            finally {
+
+            }
 
           var directionsService = new google.maps.DirectionsService;
           var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -148,14 +168,14 @@
           //new AutocompleteDirectionsHandler(map);
 
          var request = {
-            origin: 'Rouen',
-            destination: 'Strasbourg',
+            origin: originAddress,
+            destination: destinationAddress,
              travelMode: 'WALKING',
             waypoints: [
                 {
-                  location: 'Paris',
+                  location: latlng1,
                 },{
-                  location: '210 avenue Roumanille, Biot',
+                  location: latlng2,
                 }
              ]
          };
