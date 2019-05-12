@@ -14,5 +14,6 @@ namespace Web_Client
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
         }
+
     }
 }

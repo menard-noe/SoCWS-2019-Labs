@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web_Client._Default" %>
 
+
+
+
 <asp:Content ID="a" runat="server" ContentPlaceHolderID="MainContent">
 
 
@@ -10,11 +13,13 @@
     </div>
     -->
 
-    <asp:Button ID = "Button1" runat ="server" Text="Validate" class="btn" OnClick="Validate"/>
+    <asp:Button ID = "Button1" runat ="server" Text="ClickOnMeToShowCity" class="btn" OnClick="Validate"/>
 
-    <asp:TextBox ID ="TextBox1" runat ="server" TextMode="MultiLine"> 
-        
-    </asp:TextBox>
+    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="IndexChanged">
+    </asp:DropDownList>
+
+      <asp:DropDownList ID="DropDownList2" runat="server">
+    </asp:DropDownList>
 
 
     </asp:Content>

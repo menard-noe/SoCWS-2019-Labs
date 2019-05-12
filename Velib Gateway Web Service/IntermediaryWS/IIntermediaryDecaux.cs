@@ -13,14 +13,18 @@ namespace IntermediaryWS
     [ServiceContract]
     public interface IIntermediaryDecaux
     {
-        [OperationContract]
-        String GetCities(int value);
 
         [OperationContract]
         String GetStationsInfoCity(int value);
 
+        [OperationContract]
+        List<Double> FindStation(String depart, String arrive);
 
-        // TODO: ajoutez vos opérations de service ici
+        [OperationContract]
+        List<String> GetAllCities();
+
+        [OperationContract]
+        List<Stations> GetStationCity(String city);
     }
 
     // Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.

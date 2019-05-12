@@ -50,6 +50,8 @@
     <Compile Include="IIntermediaryDecaux.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IntermediaryDecaux.cs" />
+    <Compile Include="Stat.cs" />
+    <Compile Include="Stations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
