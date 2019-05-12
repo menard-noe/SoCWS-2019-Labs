@@ -20,8 +20,11 @@ namespace IntermediaryWS
         [OperationContract]
         List<Double> FindStation(String depart, String arrive);
 
+        [OperationContract]
+        List<String> GetAllCities();
 
-        // TODO: ajoutez vos opérations de service ici
+        [OperationContract]
+        List<Stations> GetStationCity(String city);
     }
 
     // Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.

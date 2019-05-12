@@ -22,7 +22,9 @@ namespace IntermediaryWS
         //String cities;
         Stat stat;
         String infos;
+        String infos2;
         List<Stations> stationList;
+        Dictionary<String, List<Stations>> AllCities;
         IntermediaryDecaux()
         {
             stat = new Stat();
@@ -32,16 +34,25 @@ namespace IntermediaryWS
             stat.AddWSVelibRequest();
             WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?apiKey=0d3d77b4dfec90f83ec727cf828e8c94c599f2ef&contract=" + contract);
             WebResponse response = request.GetResponse();
-
             Stream dataStream = response.GetResponseStream();
-            // Open the stream using a StreamReader for easy access.
             StreamReader reader = new StreamReader(dataStream);
-            // Read the content.
 
             infos = reader.ReadToEnd();
 
             stationList = ParseStations(infos);
 
+
+            WebRequest request2 = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?apiKey=0d3d77b4dfec90f83ec727cf828e8c94c599f2ef");
+
+            WebResponse response2 = request2.GetResponse();
+            Stream dataStream2 = response2.GetResponseStream();
+            StreamReader reader2 = new StreamReader(dataStream2);
+
+            infos2 = reader2.ReadToEnd();
+
+            AllCities = ParseCities(infos2);
+
+            //stationList = ParseStations(infos2);
         }
 
 
@@ -151,6 +162,58 @@ namespace IntermediaryWS
             }
 
             return stations;
+        }
+
+
+        Dictionary<String, List<Stations>> ParseCities(String json)
+        {
+            Dictionary<String, List<Stations>> CitiesParse = new Dictionary<string, List<Stations>>();
+
+            List<Stations> stations;
+            JArray jArray = JArray.Parse(json);
+
+            for (int i = 0; i < jArray.Count(); i++)
+            {
+
+                JObject jObject = (JObject)jArray[i];
+
+                String name = (String)jObject.GetValue("contract_name");
+
+                if (CitiesParse.ContainsKey(name))
+                {
+                    stations = CitiesParse[name];
+                }
+                else
+                {
+                    CitiesParse.Add(name, new List<Stations>());
+                    stations = CitiesParse[name];
+                }
+
+                String address = (String)jObject.GetValue("address");
+
+                JObject position = (JObject)jObject.GetValue("position");
+                Double lat = (Double)position.GetValue("lat");
+                Double lng = (Double)position.GetValue("lng");
+
+                int bikes = (int)jObject.GetValue("available_bikes");
+
+
+                Stations station = new Stations(name, address, lat, lng, bikes);
+
+                stations.Add(station);
+            }
+
+            return CitiesParse;
+        }
+
+        public List<String> GetAllCities()
+        {
+            return AllCities.Keys.ToList();
+        }
+
+        public List<Stations> GetStationCity(String city)
+        {
+            return AllCities[city];
         }
     }
 }

@@ -23,10 +23,11 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="de3da4e8-a7b1-4f2c-aadb-69d36a54e85d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?disco" />
+    <MetadataFile FileName="IntermediaryDecaux.wsdl" MetadataType="Wsdl" ID="6938fde6-ff55-4bc7-a1c6-125bca5faf95" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?wsdl" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="7e130585-9700-4771-b12d-6e2f616677e0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd3" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="0a17d68e-831a-41f1-bb69-93dab0fcda50" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd2" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="45e6e939-8e94-40fd-b83c-b7c45ad37b15" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd1" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="4eec1ac9-6237-4026-95b1-de17ce3253ba" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd0" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="0a17d68e-831a-41f1-bb69-93dab0fcda50" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd2" />
-    <MetadataFile FileName="IntermediaryDecaux.wsdl" MetadataType="Wsdl" ID="6938fde6-ff55-4bc7-a1c6-125bca5faf95" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
