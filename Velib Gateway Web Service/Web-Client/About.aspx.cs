@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -42,7 +43,10 @@ namespace Web_Client
 
             double[] stationsList = new double[4];
             //string[] stationsList = new string[2];
+
             stationsList = client.FindStation(depart, arrive);
+
+            //TimeSpan ts = stopWatch.Elapsed;
 
 
 

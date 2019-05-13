@@ -3,16 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace IntermediaryWS
 {
-    class Stat
+    [DataContract]
+    public class Stat
     {
         int ClientRequestGoogle = 0;
         int ClientRequestIWS = 0;
-        double AverageDelayIWS = 0;
+        TimeSpan AverageDelayIWS = new TimeSpan();
+        int counterAverageDelayIWS = 0;
         int WSVelibRequest = 0;
 
         public Stat()
@@ -20,18 +23,27 @@ namespace IntermediaryWS
             readFile();
         }
 
+        [DataMember]
         public int ClientRequestGoogle1 {
             get => ClientRequestGoogle;
             set => ClientRequestGoogle = value; }
+
+        [DataMember]
         public int ClientRequestIWS1 {
             get => ClientRequestIWS;
             set => ClientRequestIWS = value; }
-        public double AverageDelayIWS1 {
+
+        [DataMember]
+        public TimeSpan AverageDelayIWS1 {
             get => AverageDelayIWS;
             set => AverageDelayIWS = value; }
+
+        [DataMember]
         public int WSVelibRequest1 {
             get => WSVelibRequest;
             set => WSVelibRequest = value; }
+        [DataMember]
+        public int CounterAverageDelayIWS { get => counterAverageDelayIWS; set => counterAverageDelayIWS = value; }
 
         public void readFile()
         {
@@ -47,8 +59,9 @@ namespace IntermediaryWS
                 jObject = JObject.Parse(inputFile.ReadToEnd());
                 ClientRequestGoogle = (int)jObject.GetValue("ClientRequestGoogle");
                 ClientRequestIWS = (int)jObject.GetValue("ClientRequestIWS");
-                AverageDelayIWS = (double)jObject.GetValue("AverageDelayIWS");
+                AverageDelayIWS = (TimeSpan)jObject.GetValue("AverageDelayIWS");
                 WSVelibRequest = (int)jObject.GetValue("WSVelibRequest");
+                counterAverageDelayIWS = (int)jObject.GetValue("counterAverageDelayIWS");
 
                 inputFile.Close();
 
@@ -67,6 +80,7 @@ namespace IntermediaryWS
             jObject.Add("ClientRequestIWS", ClientRequestIWS);
             jObject.Add("AverageDelayIWS", AverageDelayIWS);
             jObject.Add("WSVelibRequest", WSVelibRequest);
+            jObject.Add("counterAverageDelayIWS", counterAverageDelayIWS);
 
             outputFile.WriteAsync(jObject.ToString());
 
@@ -82,9 +96,10 @@ namespace IntermediaryWS
             ClientRequestIWS++;
             writeFile();
         }
-        public void AddAverageDelayIWS()
+        public void AddAverageDelayIWS(TimeSpan timer)
         {
-            AverageDelayIWS++;
+            counterAverageDelayIWS++;
+            AverageDelayIWS = AverageDelayIWS + timer;
             writeFile();
         }
         public void AddWSVelibRequest()

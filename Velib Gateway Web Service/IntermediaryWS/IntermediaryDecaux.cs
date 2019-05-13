@@ -16,9 +16,6 @@ namespace IntermediaryWS
     {
         //https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY
 
-
-
-
         //String cities;
         Stat stat;
         String infos;
@@ -31,7 +28,7 @@ namespace IntermediaryWS
             stat.writeFile();
             
             String contract = "Lyon";
-            stat.AddWSVelibRequest();
+            //stat.AddWSVelibRequest();
             WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?apiKey=0d3d77b4dfec90f83ec727cf828e8c94c599f2ef&contract=" + contract);
             WebResponse response = request.GetResponse();
             Stream dataStream = response.GetResponseStream();
@@ -208,12 +205,26 @@ namespace IntermediaryWS
 
         public List<String> GetAllCities()
         {
+            stat.AddClientRequestIWS();
             return AllCities.Keys.ToList();
         }
 
         public List<Stations> GetStationCity(String city)
         {
+            stat.AddClientRequestIWS();
             return AllCities[city];
         }
+
+        public Stat GetStat()
+        {
+            stat.AddClientRequestIWS();
+            return stat;
+        }
+
+        public void SetTimer(TimeSpan timer)
+        {
+            stat.AddAverageDelayIWS(timer);
+        }
+
     }
 }

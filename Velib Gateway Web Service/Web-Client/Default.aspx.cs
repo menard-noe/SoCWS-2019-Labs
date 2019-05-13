@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -22,7 +23,14 @@ namespace Web_Client
         public void Validate(object sender, EventArgs e)
         {
 
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
             cities = client.GetAllCities().ToList();
+            stopWatch.Stop();
+            TimeSpan ts = stopWatch.Elapsed;
+            client.SetTimer(ts);
+
+
             DropDownList1.DataSource = cities;
             DropDownList1.DataBind();
         }

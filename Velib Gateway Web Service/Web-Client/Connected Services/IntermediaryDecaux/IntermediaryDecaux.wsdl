@@ -32,6 +32,18 @@
   <wsdl:message name="IIntermediaryDecaux_GetStationCity_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetStationCityResponse" />
   </wsdl:message>
+  <wsdl:message name="IIntermediaryDecaux_GetStat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStat" />
+  </wsdl:message>
+  <wsdl:message name="IIntermediaryDecaux_GetStat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntermediaryDecaux_SetTimer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTimer" />
+  </wsdl:message>
+  <wsdl:message name="IIntermediaryDecaux_SetTimer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTimerResponse" />
+  </wsdl:message>
   <wsdl:portType name="IIntermediaryDecaux">
     <wsdl:operation name="GetStationsInfoCity">
       <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetStationsInfoCity" message="tns:IIntermediaryDecaux_GetStationsInfoCity_InputMessage" />
@@ -48,6 +60,14 @@
     <wsdl:operation name="GetStationCity">
       <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetStationCity" message="tns:IIntermediaryDecaux_GetStationCity_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetStationCityResponse" message="tns:IIntermediaryDecaux_GetStationCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetStat" message="tns:IIntermediaryDecaux_GetStat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIntermediaryDecaux/GetStatResponse" message="tns:IIntermediaryDecaux_GetStat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTimer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIntermediaryDecaux/SetTimer" message="tns:IIntermediaryDecaux_SetTimer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIntermediaryDecaux/SetTimerResponse" message="tns:IIntermediaryDecaux_SetTimer_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIntermediaryDecaux" type="tns:IIntermediaryDecaux">
@@ -81,6 +101,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetStationCity">
       <soap:operation soapAction="http://tempuri.org/IIntermediaryDecaux/GetStationCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStat">
+      <soap:operation soapAction="http://tempuri.org/IIntermediaryDecaux/GetStat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTimer">
+      <soap:operation soapAction="http://tempuri.org/IIntermediaryDecaux/SetTimer" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
