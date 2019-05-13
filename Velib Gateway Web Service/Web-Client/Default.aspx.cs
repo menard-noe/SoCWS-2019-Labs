@@ -16,12 +16,7 @@ namespace Web_Client
 
         protected void Page_Load(object sender, EventArgs e)
         {
-             client = new IntermediaryDecauxClient();
-        }
-
-        public void Validate(object sender, EventArgs e)
-        {
-
+            client = new IntermediaryDecauxClient();
             cities = client.GetAllCities().ToList();
             DropDownList1.DataSource = cities;
             DropDownList1.DataBind();
