@@ -15,7 +15,7 @@ namespace Web_Client
 {
     public partial class About : Page
     {
-        public String originAddress = "Rouen";
+        public String originAddress = "Lyon";
         public String destinationAddress = "Strasbourg";
         public String lat1 = "45.808425";
         public String lng1 = "4.898393";

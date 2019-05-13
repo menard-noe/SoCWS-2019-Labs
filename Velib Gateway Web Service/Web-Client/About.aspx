@@ -5,9 +5,9 @@
 
     
 
-    <h2><%: Title %>.</h2>
-#   <style>
-         .controls {
+   <style>
+        
+        .controls {
         margin-top: 10px;
         border: 1px solid transparent;
         border-radius: 2px 0 0 2px;
@@ -21,7 +21,7 @@
       #origin-input,
       #destination-input {
         background-color: #fff;
-        font-family: Roboto;
+        font-family: Montserrat;
         font-size: 15px;
         font-weight: 300;
         margin-left: 12px;
@@ -43,26 +43,9 @@
       }
 
       #mode-selector label {
-        font-family: Roboto;
+        font-family: Montserrat;
         font-size: 13px;
         font-weight: 300;
-      }
-      #right-panel {
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-
-      #right-panel select, #right-panel input {
-        font-size: 15px;
-      }
-
-      #right-panel select {
-        width: 100%;
-      }
-
-      #right-panel i {
-        font-size: 12px;
       }
       html, body {
         height: 100%;
@@ -70,9 +53,9 @@
         padding: 0;
       }
       #map {
-        height: 1000px;
-        float: left;
-        width: 70%;
+        border-radius: 15px;
+        height: 800px;
+        width: 100%;
       }
       #right-panel {
         margin: 20px;
@@ -90,46 +73,40 @@
         overflow: scroll;
         height: 174px;
       }
+      .input{
+          text-align: center; 
+          border: none; 
+          border-bottom: 1px solid #707070;
+      }
+      .input:focus{
+          outline: 0;
+          border-color: #5FAD81;
+      }
+      .button{
+          background-color: #5FAD81;
+          box-shadow: 1px 1px #7B1957;
+          border:none;
+          color: white;
+          border-radius: 5px;
+      }
     </style>
 
-    <div>
-        <asp:Label runat="server" Text="Depart"></asp:Label>
-        <asp:TextBox ID="Depart" runat="server">
-        </asp:TextBox>
-        <asp:Label runat="server" Text="">Arrive</asp:Label>
-        <asp:TextBox ID="Arrive" runat="server">
-        </asp:TextBox>
-
-        <asp:Button ID="Button1" runat="server" Text="Validate" OnClick="ValidateForm"/>
-        <asp:TextBox ID="TextBox1" runat="server">
-        </asp:TextBox>
+    <div style="margin: 2em 0 4px 0; display: flex;">
+        <div style="margin-right:2em">
+            <asp:Label runat="server" Text="Départ" style="margin-right:.5em"></asp:Label>
+            <asp:TextBox ID="Depart" placeholder="123 Jean Moulin" onfocus="this.placeholder=''" onblur="this.placeholder = '123 Jean Moulin'" runat="server" CssClass="input">
+            </asp:TextBox>
+        </div>
+        <div style="margin-right:2em">
+            <asp:Label runat="server" Text="" style="margin-right:.5em">Destination</asp:Label>
+            <asp:TextBox ID="Arrive" placeholder="123 Jean Moulin" onfocus="this.placeholder=''" onblur="this.placeholder = '123 Jean Moulin'" runat="server" CssClass="input">
+            </asp:TextBox>
+        </div>
+        <asp:Button ID="Button1" runat="server" Text="Valider" CssClass="button" OnClick="ValidateForm"/>
     </div>
 
     <div id="map"></div>
-    <div id="right-panel">
-        <div style="display: none">
-            <input id="origin-input" class="controls" type="text"
-                   placeholder="Enter an origin location">
-
-            <input id="origin-velib" class="controls" type="text"
-                   placeholder="Enter a velib here">
-            <input id="destination-velib" class="controls" type="text"
-                   placeholder="Enter a velib here">
-            <input id="destination-input" class="controls" type="text"
-                   placeholder="Enter a destination location">
-
-            <div id="mode-selector" class="controls">
-                <input type="radio" name="type" id="changemode-walking" checked="checked">
-                <label for="changemode-walking">Walking</label>
-
-                <input type="radio" name="type" id="changemode-transit">
-                <label for="changemode-transit">Transit</label>
-
-                <input type="radio" name="type" id="changemode-driving">
-                <label for="changemode-driving">Driving</label>
-            </div>
-        </div>
-    </div>
+    
     <script>
         function initMap() {
 

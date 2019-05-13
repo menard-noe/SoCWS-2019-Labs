@@ -34,6 +34,11 @@
     height: 480px !important;
     min-width: 25% !important;
 }
+
+.listBox:focus, .textBox:focus {
+    outline:0;
+}
+
 .listBox option {
     font-family: Montserrat;
     text-align: right;
@@ -49,5 +54,14 @@
     font-size: 25px;
 }
 
-.listBox option:checked {
+.stations option {
+    padding: 2.2em 1em 1em 0 !important;
+    overflow-x: auto;
+    text-overflow: ellipsis;
+}
+
+.textBox {
+    width: 280px;
+    height: 160px !important;
+    text-align: center;
 }

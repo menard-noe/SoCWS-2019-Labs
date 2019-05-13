@@ -47,15 +47,15 @@
                 </a>
                 <div class="texts">
                     <span>JCDECAUX</span>
-                    <a href="/~"><span>STATS</span></a>
+                    <a runat="server" href="~/"><span>STATS</span></a>
                 </div> 
 
             </div>
             <div class="navigation" style="flex">
                 <a runat="server" href="~/" class="link">VILLES</a>
                 <a runat="server" href="~/About" class="link">ITINÉRAIRE</a>
-                <a runat="server" href="~/Contact" class="link">TARIFS</a>
-                <a runat="server" href="~/Contact" class="link">CONTACT</a>
+                <a runat="server" class="link" >TARIFS</a>
+                <a runat="server" class="link">CONTACT</a>
             </div>
         </div>
 

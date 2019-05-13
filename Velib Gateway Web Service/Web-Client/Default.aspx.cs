@@ -12,6 +12,7 @@ namespace Web_Client
     public partial class _Default : Page
     {
         List<String> cities;
+        List<String> addresses = new List<String>();
         List<Stations> cityInfo;
         IntermediaryDecauxClient client;
 
@@ -42,11 +43,24 @@ namespace Web_Client
             string value = (string)list.SelectedValue;
             cityInfo = client.GetStationCity(value.ToLower()).ToList();
 
-            ListBox2.DataSource = cityInfo;
+            
+            cityInfo.ForEach(x => { addresses.Add(x.Address); } );
+
+            ListBox2.DataSource = addresses;
             ListBox2.DataBind();
             ListBox2.Visible = true;
         }
 
+        public void StationChanged(object sender, EventArgs e)
+        {
+            ListBox list = (ListBox)sender;
+            string currentCity = (string)ListBox1.SelectedValue;
+            string currentStation = (string)ListBox2.SelectedValue;
+            cityInfo = client.GetStationCity(currentCity.ToLower()).ToList();
 
+            cityInfo.ForEach(x => { if (x.Address == currentStation) TextBox.Text = x.Bikes.ToString()+" vélos disponibles"; });
+            TextBox.Visible = true;
+
+        }
     }
 }

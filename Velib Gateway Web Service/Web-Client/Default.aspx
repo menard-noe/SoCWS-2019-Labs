@@ -10,13 +10,14 @@
     <div id="info" class="list-wrapper">
         <asp:ListBox ID="ListBox1" runat="server" AutoPostBack="true" CssClass="listBox cities" Visible="false" OnSelectedIndexChanged="IndexChanged">
         </asp:ListBox>
-        <asp:ListBox ID="ListBox2" runat="server" AutoPostBack="true" CssClass="listBox" Visible="false">
+        <asp:ListBox ID="ListBox2" runat="server" AutoPostBack="true" CssClass="listBox stations" Visible="false" OnSelectedIndexChanged="StationChanged">
         </asp:ListBox>
+        <asp:TextBox ID="TextBox" runat="server" AutoPostBack="true" CssClass="textBox infos" Visible="false" Text=".">
+        </asp:TextBox>
     </div>
 
     <script>
         function click_btn() {
-            console.log("wow");
             document.getElementById("MainContent_Button1").click()
         }
         window.onload = click_btn;
