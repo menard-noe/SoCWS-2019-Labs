@@ -5,3 +5,13 @@
 #MainContent_DropDownList1 {
     font-style: italic;
 }
+
+.list {
+    OVERFLOW: auto;
+    height: 200px;
+}
+
+select {
+    height: 50px;
+    background-color: pink;
+}

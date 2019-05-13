@@ -1,0 +1,53 @@
+﻿body {
+    font-family: Oswald, Montserrat;
+}
+
+#MainContent_DropDownList1 {
+    font-style: italic;
+}
+
+.show-btn {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.list-wrapper {
+    margin-top: 2em;
+    OVERFLOW: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: url(/assets/bikes-photo-transp.png);
+    background-size: 100% 150%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #707070;
+}
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+
+.listBox {
+    height: 480px !important;
+    min-width: 25% !important;
+}
+.listBox option {
+    font-family: Montserrat;
+    text-align: right;
+    height: 80px;
+    width: 100%;
+    color: #707070;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    padding: 1em 1em 1em 0 !important;
+}
+
+.cities {
+    font-size: 25px;
+}
+
+.listBox option:checked {
+}

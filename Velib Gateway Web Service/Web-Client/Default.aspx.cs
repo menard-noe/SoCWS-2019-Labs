@@ -20,9 +20,7 @@ namespace Web_Client
             client = new IntermediaryDecauxClient();
         }
 
-        public void Validate(object sender, EventArgs e)
-        {
-
+        protected void Validate(object sender, EventArgs e) { 
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             cities = client.GetAllCities().ToList();
@@ -30,19 +28,23 @@ namespace Web_Client
             TimeSpan ts = stopWatch.Elapsed;
             client.SetTimer(ts);
 
+            cities = cities.ConvertAll(d => d.ToUpper());
 
-            DropDownList1.DataSource = cities;
-            DropDownList1.DataBind();
+            ListBox1.DataSource = cities;
+            ListBox1.DataBind();
+            ListBox1.Visible = true;
+            Button1.Visible = false;
         }
 
         public void IndexChanged(object sender, EventArgs e)
         {
-            DropDownList list = (DropDownList)sender;
+            ListBox list = (ListBox)sender;
             string value = (string)list.SelectedValue;
-            cityInfo = client.GetStationCity(value).ToList();
+            cityInfo = client.GetStationCity(value.ToLower()).ToList();
 
-            DropDownList2.DataSource = cityInfo;
-            DropDownList2.DataBind();
+            ListBox2.DataSource = cityInfo;
+            ListBox2.DataBind();
+            ListBox2.Visible = true;
         }
 
 
