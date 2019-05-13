@@ -2,6 +2,7 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IntermediaryWS" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/IntermediaryWS/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:element name="GetStationsInfoCity">
     <xs:complexType>
       <xs:sequence>
@@ -55,6 +56,30 @@
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IntermediaryWS" minOccurs="0" name="GetStationCityResult" nillable="true" type="q3:ArrayOfStations" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStat">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IntermediaryWS" minOccurs="0" name="GetStatResult" nillable="true" type="q4:Stat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTimer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="timer" type="q5:duration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTimerResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

@@ -122,6 +122,115 @@ namespace WS_Client.IntermediaryDecaux {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Stat", Namespace="http://schemas.datacontract.org/2004/07/IntermediaryWS")]
+    [System.SerializableAttribute()]
+    public partial class Stat : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.TimeSpan AverageDelayIWS1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ClientRequestGoogle1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ClientRequestIWS1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CounterAverageDelayIWSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int WSVelibRequest1Field;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.TimeSpan AverageDelayIWS1 {
+            get {
+                return this.AverageDelayIWS1Field;
+            }
+            set {
+                if ((this.AverageDelayIWS1Field.Equals(value) != true)) {
+                    this.AverageDelayIWS1Field = value;
+                    this.RaisePropertyChanged("AverageDelayIWS1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ClientRequestGoogle1 {
+            get {
+                return this.ClientRequestGoogle1Field;
+            }
+            set {
+                if ((this.ClientRequestGoogle1Field.Equals(value) != true)) {
+                    this.ClientRequestGoogle1Field = value;
+                    this.RaisePropertyChanged("ClientRequestGoogle1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ClientRequestIWS1 {
+            get {
+                return this.ClientRequestIWS1Field;
+            }
+            set {
+                if ((this.ClientRequestIWS1Field.Equals(value) != true)) {
+                    this.ClientRequestIWS1Field = value;
+                    this.RaisePropertyChanged("ClientRequestIWS1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CounterAverageDelayIWS {
+            get {
+                return this.CounterAverageDelayIWSField;
+            }
+            set {
+                if ((this.CounterAverageDelayIWSField.Equals(value) != true)) {
+                    this.CounterAverageDelayIWSField = value;
+                    this.RaisePropertyChanged("CounterAverageDelayIWS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int WSVelibRequest1 {
+            get {
+                return this.WSVelibRequest1Field;
+            }
+            set {
+                if ((this.WSVelibRequest1Field.Equals(value) != true)) {
+                    this.WSVelibRequest1Field = value;
+                    this.RaisePropertyChanged("WSVelibRequest1");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IntermediaryDecaux.IIntermediaryDecaux")]
     public interface IIntermediaryDecaux {
@@ -149,6 +258,18 @@ namespace WS_Client.IntermediaryDecaux {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/GetStationCity", ReplyAction="http://tempuri.org/IIntermediaryDecaux/GetStationCityResponse")]
         System.Threading.Tasks.Task<WS_Client.IntermediaryDecaux.Stations[]> GetStationCityAsync(string city);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/GetStat", ReplyAction="http://tempuri.org/IIntermediaryDecaux/GetStatResponse")]
+        WS_Client.IntermediaryDecaux.Stat GetStat();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/GetStat", ReplyAction="http://tempuri.org/IIntermediaryDecaux/GetStatResponse")]
+        System.Threading.Tasks.Task<WS_Client.IntermediaryDecaux.Stat> GetStatAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/SetTimer", ReplyAction="http://tempuri.org/IIntermediaryDecaux/SetTimerResponse")]
+        void SetTimer(System.TimeSpan timer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIntermediaryDecaux/SetTimer", ReplyAction="http://tempuri.org/IIntermediaryDecaux/SetTimerResponse")]
+        System.Threading.Tasks.Task SetTimerAsync(System.TimeSpan timer);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -208,6 +329,22 @@ namespace WS_Client.IntermediaryDecaux {
         
         public System.Threading.Tasks.Task<WS_Client.IntermediaryDecaux.Stations[]> GetStationCityAsync(string city) {
             return base.Channel.GetStationCityAsync(city);
+        }
+        
+        public WS_Client.IntermediaryDecaux.Stat GetStat() {
+            return base.Channel.GetStat();
+        }
+        
+        public System.Threading.Tasks.Task<WS_Client.IntermediaryDecaux.Stat> GetStatAsync() {
+            return base.Channel.GetStatAsync();
+        }
+        
+        public void SetTimer(System.TimeSpan timer) {
+            base.Channel.SetTimer(timer);
+        }
+        
+        public System.Threading.Tasks.Task SetTimerAsync(System.TimeSpan timer) {
+            return base.Channel.SetTimerAsync(timer);
         }
     }
 }

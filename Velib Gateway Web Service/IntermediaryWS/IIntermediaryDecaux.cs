@@ -25,6 +25,12 @@ namespace IntermediaryWS
 
         [OperationContract]
         List<Stations> GetStationCity(String city);
+
+        [OperationContract]
+        Stat GetStat();
+
+        [OperationContract]
+        void SetTimer(TimeSpan timer);
     }
 
     // Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.

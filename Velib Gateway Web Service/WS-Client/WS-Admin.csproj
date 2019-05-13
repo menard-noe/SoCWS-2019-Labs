@@ -86,6 +86,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\IntermediaryDecaux\Service1.wsdl" />
+    <None Include="Connected Services\IntermediaryDecaux\WS_Client.IntermediaryDecaux.Stat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\IntermediaryDecaux\WS_Client.IntermediaryDecaux.Stations.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
