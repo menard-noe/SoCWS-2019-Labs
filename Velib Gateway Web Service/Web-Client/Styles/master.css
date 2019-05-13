@@ -76,17 +76,6 @@ a {
     border-right: 1px solid #7B1957;
 }
 
-
-<div class="wrapper" >
-<div class="header" style="flex" >
-<a runat="server" href="~/" >
-<img src="assets/bike-icon.jpg" alt="logo" height="35px" width="35px"/ >
-</a >
-<span > JCDecaux</span >
-</div >
-<div class="navigation" style="flex" >
-<a runat="server" href="~/" > <span > Villes</span > </a >
-<a runat="server" href="~/About" > <span > Itinéraire</span > </a >
-<a runat="server" href="~/Contact" > <span > Contact</span > </a >
-</div >
-</div >
+.body-content {
+    width: 75%;
+}
