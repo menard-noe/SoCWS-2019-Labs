@@ -72,6 +72,10 @@ a {
     text-align: center;
 }
 
+.navigation a:hover {
+    border-bottom: 3px solid #7B1957;
+}
+
 .navigation a:not(:last-child) {
     border-right: 1px solid #7B1957;
 }

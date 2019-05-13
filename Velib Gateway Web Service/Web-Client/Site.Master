@@ -47,7 +47,7 @@
                 </a>
                 <div class="texts">
                     <span>JCDECAUX</span>
-                    <a runat="server" href="~/"><span>STATS</span></a>
+                    <a runat="server" href="~/Contact"><span>STATS</span></a>
                 </div> 
 
             </div>
