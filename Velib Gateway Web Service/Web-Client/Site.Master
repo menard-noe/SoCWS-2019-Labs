@@ -71,7 +71,6 @@
                 </a>
                 <div class="texts">
                     <span>JCDECAUX</span>
-                    <a runat="server" href="~/Contact"><span>STATS</span></a>
                 </div> 
 
             </div>
