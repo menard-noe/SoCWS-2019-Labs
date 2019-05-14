@@ -2,9 +2,8 @@
 
 
 <asp:Content ID="a" runat="server" ContentPlaceHolderID="MainContent">
-
+    
     <link rel="stylesheet" type="text/css" href="Styles/home.css" runat="server"/>
-
     <asp:Button ID="Button1" runat ="server" Text="Voir les villes" class="btn" CssClass="show-btn" OnClick="Validate" Visible="True"/>
 
     <div id="info" class="list-wrapper">

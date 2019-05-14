@@ -70,10 +70,20 @@ a {
     color: #333;
     flex: 1;
     text-align: center;
+    position: relative;
 }
 
-.navigation a:hover {
-    border-bottom: 3px solid #7B1957;
+.navigation a::after {
+    transition: 300ms;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: #7B1957;
+    width: 0%;
+}   
+
+.navigation a:hover::after {
+    width: 100px;
 }
 
 .navigation a:not(:last-child) {

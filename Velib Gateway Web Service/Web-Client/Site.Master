@@ -16,6 +16,30 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/Styles/master.css"  rel="stylesheet" type="text/css" runat="server" />
+    <style>
+        .navigation a {
+            color: #7B1957 !important;
+            font-family: Oswald;
+            font-size: 25px;
+            color: #333;
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .navigation a::after {
+            transition: 300ms;
+            height: 3px;
+            content: "";
+            left:25%;
+            bottom:0%;
+            position: absolute;
+            background-color: #7B1957;
+            width: 0%;
+        }
+        .navigation a:hover::after {
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
