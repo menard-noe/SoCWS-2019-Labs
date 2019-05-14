@@ -12,6 +12,10 @@
     left: -100px;
 }
 
+select, .textBox {
+    max-width: 25%;
+}
+
 .list-wrapper {
     margin-top: 2em;
     OVERFLOW: auto;
@@ -61,7 +65,7 @@
 }
 
 .textBox {
-    width: 280px;
+    width: 25%;
     height: 160px !important;
     text-align: center;
 }
