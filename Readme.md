@@ -1,6 +1,6 @@
 # SI4 : Service oriented computing - Web Services 
 
-## Auteur
+## Auteurs
 Noé MENARD  
 Clément DURAND
 

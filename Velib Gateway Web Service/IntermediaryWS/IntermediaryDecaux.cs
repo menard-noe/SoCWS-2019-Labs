@@ -205,12 +205,14 @@ namespace IntermediaryWS
 
         public List<String> GetAllCities()
         {
+            stat.AddWSVelibRequest();
             stat.AddClientRequestIWS();
             return AllCities.Keys.ToList();
         }
 
         public List<Stations> GetStationCity(String city)
         {
+            stat.AddWSVelibRequest();
             stat.AddClientRequestIWS();
             return AllCities[city];
         }
