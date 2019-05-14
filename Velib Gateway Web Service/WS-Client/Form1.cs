@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WS_Client.IntermediaryDecaux;
+using WS_Client.IntermediaryDecauxClient;
 
 namespace WS_Client
 {
@@ -23,7 +23,7 @@ namespace WS_Client
 
         public void Init()
         {
-            IntermediaryDecauxClient client = new IntermediaryDecauxClient();
+            AdminClient client = new AdminClient();
 
 
             //TimeSpan ts = stopWatch.Elapsed;
