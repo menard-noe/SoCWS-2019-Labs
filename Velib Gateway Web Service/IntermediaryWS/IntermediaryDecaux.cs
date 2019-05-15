@@ -11,7 +11,6 @@ using Newtonsoft.Json.Linq;
 namespace IntermediaryWS
 {
 
-    // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class IntermediaryDecaux : IIntermediaryDecaux
     {
         //https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY
@@ -22,13 +21,14 @@ namespace IntermediaryWS
         String infos2;
         List<Stations> stationList;
         Dictionary<String, List<Stations>> AllCities;
+
         IntermediaryDecaux()
         {
             stat = new Stat();
             stat.writeFile();
             
             String contract = "Lyon";
-            //stat.AddWSVelibRequest();
+            stat.AddWSVelibRequest();
             WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?apiKey=0d3d77b4dfec90f83ec727cf828e8c94c599f2ef&contract=" + contract);
             WebResponse response = request.GetResponse();
             Stream dataStream = response.GetResponseStream();

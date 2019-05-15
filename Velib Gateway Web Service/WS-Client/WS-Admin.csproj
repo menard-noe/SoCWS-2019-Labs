@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\IntermediaryDecaux\Reference.cs">
+    <Compile Include="Connected Services\IntermediaryDecauxClient\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,23 +73,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\IntermediaryDecaux\item.xsd">
+    <None Include="Connected Services\IntermediaryDecauxClient\IntermediaryWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\IntermediaryDecaux\item1.xsd">
+    <None Include="Connected Services\IntermediaryDecauxClient\service.wsdl" />
+    <None Include="Connected Services\IntermediaryDecauxClient\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\IntermediaryDecaux\item2.xsd">
+    <None Include="Connected Services\IntermediaryDecauxClient\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\IntermediaryDecaux\item3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IntermediaryDecaux\Service1.wsdl" />
-    <None Include="Connected Services\IntermediaryDecaux\WS_Client.IntermediaryDecaux.Stat.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\IntermediaryDecaux\WS_Client.IntermediaryDecaux.Stations.datasource">
+    <None Include="Connected Services\IntermediaryDecauxClient\WS_Client.IntermediaryDecauxClient.Stat.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -109,19 +103,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\IntermediaryDecaux\" />
+    <WCFMetadataStorage Include="Connected Services\IntermediaryDecauxClient\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IntermediaryDecaux\item.disco" />
+    <None Include="Connected Services\IntermediaryDecauxClient\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IntermediaryDecaux\configuration91.svcinfo" />
+    <None Include="Connected Services\IntermediaryDecauxClient\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IntermediaryDecaux\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\IntermediaryDecaux\Reference.svcmap">
+    <None Include="Connected Services\IntermediaryDecauxClient\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -34,7 +34,7 @@ Les statistiques sont persistantes et ne sont de ce fait pas perdus si le progra
   3. **WS-Admin :** Application Windows Form qui communique avec `IntermediaryWS` via un protocol SOAP. Cette interface donne accès à plusieurs statistiques concernant l'application.
    
   
-   ![appels](Architecture.jpg)    
+   ![appels](ArchitectureNew.jpg)    
    
    
 ## Investissement
