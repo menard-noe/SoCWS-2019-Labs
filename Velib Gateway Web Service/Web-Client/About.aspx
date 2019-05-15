@@ -139,8 +139,8 @@
 
           var map = new google.maps.Map(document.getElementById('map'), {
             mapTypeControl: false,
-          zoom: 15,
-              center: { lat: 49.44, lng: 1.09 }
+          zoom: 14,
+              center: { lat: 45.75, lng: 4.85 }
           });
           //new AutocompleteDirectionsHandler(map);
 
