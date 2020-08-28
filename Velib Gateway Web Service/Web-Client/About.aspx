@@ -168,7 +168,7 @@
 
     </script>
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYXWW2Y_IdfTYXyn-iep5hbHDdpOyTqwM&libraries=places&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=...&libraries=places&callback=initMap">
     </script>
     
 </asp:Content>
